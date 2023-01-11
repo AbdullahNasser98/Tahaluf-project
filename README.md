@@ -12,7 +12,7 @@ In trying to make the comparison as fair as possible. I used the folloing models
 1. YOLOX-s:
 
 | Model | size | mAPval_0.5:0.95 | mAPtest_0.5:0.95 | Speed V100 (ms) | Params(M) | FLOPs (G) |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | -----------  | ----------- | 
 YOLOX-s |	640	| 40.5	| 40.5	| 9.8	| 9.0	| 26.8
 
 
