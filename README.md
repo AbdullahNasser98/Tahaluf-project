@@ -18,6 +18,6 @@ YOLOX-s |	640	| 40.5	| 40.5	| 9.8	| 9.0	| 26.8
 
 2. YOLOv5s:
 
-Model	| size (pixels)	| mAPval_50-95 |	mAPval_50 |	Speed CPU b1 (ms)	| Speed V100 b1 (ms)	| Speed V100 b32 (ms)	| params (M) |	FLOPs @640 (B) |
-| ----------- | ----------- |
-YOLOv5s	| 640	| 37.4	| 56.8	| 98	| 6.4	| 0.9	| 7.2	| 16.5
+Model	| size (pixels)	| mAPval_50-95 | Speed V100 b1 (ms)	| Speed V100 b32 (ms)	| params (M) |	FLOPs @640 (B) |
+| ----------- | ----------- | ----------- | ----------- | ----------- | -----------  | ----------- | 
+YOLOv5s	| 640	| 37.4	| 6.4	| 0.9	| 7.2	| 16.5
