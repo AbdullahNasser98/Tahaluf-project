@@ -11,13 +11,13 @@ In trying to make the comparison as fair as possible. I used the folloing models
 
 1. YOLOX-s:
 
-| Model | size | mAPval_0.5:0.95 | mAPtest_0.5:0.95 | Speed V100 (ms) | Params(M) | FLOPs (G)
+| Model | size | mAPval_0.5:0.95 | mAPtest_0.5:0.95 | Speed V100 (ms) | Params(M) | FLOPs (G) |
 | ----------- | ----------- |
 YOLOX-s |	640	| 40.5	| 40.5	| 9.8	| 9.0	| 26.8
 
 
 2. YOLOv5s:
 
-Model	| size (pixels)	| mAPval_50-95 |	mAPval_50 |	Speed CPU b1 (ms)	| Speed V100 b1 (ms)	| Speed V100 b32 (ms)	| params (M) |	FLOPs @640 (B)
+Model	| size (pixels)	| mAPval_50-95 |	mAPval_50 |	Speed CPU b1 (ms)	| Speed V100 b1 (ms)	| Speed V100 b32 (ms)	| params (M) |	FLOPs @640 (B) |
 | ----------- | ----------- |
 YOLOv5s	| 640	| 37.4	| 56.8	| 98	| 6.4	| 0.9	| 7.2	| 16.5
