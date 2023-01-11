@@ -1,4 +1,4 @@
-# Tahaluf-project
+# Task 1
 
 ![logo](https://user-images.githubusercontent.com/61900536/211860333-ecf767e2-4521-4ead-ad2e-a292373a2e9b.png)
 
@@ -22,3 +22,12 @@ YOLOX-s |	640	| 40.5	| 40.5	| 9.8	| 9.0	| 26.8
 Model	| size (pixels)	| mAPval_50-95 | Speed V100 b1 (ms)	| Speed V100 b32 (ms)	| params (M) |	FLOPs @640 (B) |
 | ----------- | ----------- | ----------- | ----------- | ----------- | -----------  | ----------- | 
 YOLOv5s	| 640	| 37.4	| 6.4	| 0.9	| 7.2	| 16.5
+
+
+## Note: The YoloX model has couple million more parameters, but thats the closest we will get to the 9M of yoloX.
+
+Both models were trained for 50 epochs, and these were the results:
+1. The validation AP_0.5:0.95 for **YoloX** was **0.677**.
+2. The validation AP_0.5:0.95 for **Yolov5** was **0.15**.
+
+Thus proving that YoloX does indeed yield better results and converges faster
