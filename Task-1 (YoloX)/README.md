@@ -24,10 +24,11 @@ Model	| size (pixels)	| mAPval_50-95 | Speed V100 b1 (ms)	| Speed V100 b32 (ms)	
 YOLOv5s	| 640	| 37.4	| 6.4	| 0.9	| 7.2	| 16.5
 
 
-## Note: The YoloX model has couple million more parameters, but thats the closest we will get to the 9M of yoloX.
+### Note: The YoloX model has couple million more parameters, but thats the closest we will get to the 9M of yoloX.
 
 Both models were trained for 50 epochs, and these were the results:
 1. The validation AP_0.5:0.95 for **YoloX** was **0.677**.
 2. The validation AP_0.5:0.95 for **Yolov5** was **0.15**.
 
 Thus proving that YoloX does indeed yield better results and converges faster
+
