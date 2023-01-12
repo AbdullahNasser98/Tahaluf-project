@@ -21,14 +21,14 @@ We used to approaches to choosing a model.
 1. A CNN which we built and trained from scratch
 2. And MobileNetV2
 Keeping in mind having the weights as low as possible for easy deployment of the model
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[## Model 1 (CNN trained from scratch):
-[
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Model 1 (CNN trained from scratch):
+
 ### model architecture
 ![image](https://user-images.githubusercontent.com/61900536/212165446-2b6b9631-4a09-44b3-b2e2-978e2c951c11.png)
 - I used learning rate decay and early stopping to prevent overfitting
 - I also used class weight balancing methods to prevent biassing towards one class
-]
+
 ### Receptive field
 In short, receptive field is the size of the region in the input that produces the feature.
 
@@ -45,9 +45,26 @@ Methods to increase the receptive field:
 below is an image of how sub-sampling and dilated conv affects the receptive field.
 
 ![Receptive-field-pooling-vs-dilated-conv](https://user-images.githubusercontent.com/61900536/212173854-f864e29b-215a-4869-a971-4b4d22ab6e06.png)
-]
+
+| Receptive field | Value |
+| ----------- | ----------- |
+| RF | test |
+
+### FLOPs & MACCs:
+
+**The below tabel contains the values of FLOPs and MACCs for every convolution and dense layer in our model**
+
+| Layer name | FLOPs | MACCs |
+| ----------- | ----------- | ----------- |
+| conv2d   | test | test |
+| conv2d_1   | test | test |
+| conv2d_2   | test | test |
+| conv2d_3   | test | test |
+| Dense  | test | test |
+| Dense_1  | test | test |
 
 
-[test]
+
+
 
 
