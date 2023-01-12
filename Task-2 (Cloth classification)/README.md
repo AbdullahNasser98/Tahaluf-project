@@ -48,20 +48,21 @@ below is an image of how sub-sampling and dilated conv affects the receptive fie
 
 | Receptive field | Value |
 | ----------- | ----------- |
-| RF | test |
+| RF | 1 |
 
 ### FLOPs & MACCs:
+One way to get an idea of the speed of your model is to simply count how many computations it does. We typically count this as FLOPS, floating point operations per second. A slight variation of this is MACCs or multiply-accumulate operations, also known as MADDs.
 
 **The below tabel contains the values of FLOPs and MACCs for every convolution and dense layer in our model**
 
 | Layer name | FLOPs | MACCs |
 | ----------- | ----------- | ----------- |
-| conv2d   | test | test |
-| conv2d_1   | test | test |
-| conv2d_2   | test | test |
-| conv2d_3   | test | test |
-| Dense  | test | test |
-| Dense_1  | test | test |
+| conv2d   | 25165824 | 9,720,00 |
+| conv2d_1   | 66064384 | 32,514,048 |
+| conv2d_2   | 65028096 | 31,490,048 |
+| conv2d_3   | 62980096 | 29,491,200 |
+| Dense  | 7372800 | 3,686,400 |
+| Dense_1  | 2560 | 1280 |
 
 
 
