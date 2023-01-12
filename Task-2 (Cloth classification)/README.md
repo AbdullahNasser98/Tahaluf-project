@@ -1,5 +1,11 @@
 # Cloth Classification
 
+<details>
+<summary>How do I dropdown?</summary>
+<br>
+This is how you dropdown.
+</details>
+
 ## In this file we are going to work on classifying different items of clothing
 
 ## Dataset introduction:
