@@ -10,3 +10,9 @@
 ![cloth](https://user-images.githubusercontent.com/61900536/212160337-3b64403c-6733-4df3-90d8-864467fb3190.png)
 - And looking at the figure below we can notice that there is a slight class imbalancing problem which we solve later on in the code
 ![distribution](https://user-images.githubusercontent.com/61900536/212162555-9b21c9b3-ee9c-4b75-9e12-da0559258fed.png)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Preprocessing steps:
+- Resize the images to 256,256
+- Add rotation and zoom augmentation
+- Data split: Training=**3068** images, testing=**372** images, and validation=**341** images.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
