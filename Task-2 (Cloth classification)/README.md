@@ -1,14 +1,10 @@
 # Cloth Classification
 
-<details>
-<summary>How do I dropdown?</summary>
-<br>
-This is how you dropdown.
-</details>
-
 ## In this file we are going to work on classifying different items of clothing
 
-## Dataset introduction:
+<details>
+<summary>## Dataset introduction:</summary>
+<br>
 - In this data you will find 10 popular items of clothing
 - The images shape is (533, 400, 3)
 - Classes in the dataset = [shirt, longsleeve, dress, skirt, tshirt, pants, outwear, hat, shoes]
@@ -16,20 +12,31 @@ This is how you dropdown.
 ![cloth](https://user-images.githubusercontent.com/61900536/212160337-3b64403c-6733-4df3-90d8-864467fb3190.png)
 - And looking at the figure below we can notice that there is a slight class imbalancing problem which we solve later on in the code
 ![distribution](https://user-images.githubusercontent.com/61900536/212162555-9b21c9b3-ee9c-4b75-9e12-da0559258fed.png)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Preprocessing steps:
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<details>
+<summary>## Preprocessing steps:</summary>
+<br>
 - Resize the images to 256,256
 - Add rotation and zoom augmentation
 - Data split: Training=**3068** images, testing=**372** images, and validation=**341** images.
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Model:
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<details>
+<summary>## Model:</summary>
+<br>
 We used to approaches to choosing a model.
 1. A CNN which we built and trained from scratch
 2. And MobileNetV2
 Keeping in mind having the weights as low as possible for easy deployment of the model
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Model 1 (CNN trained from scratch):
+</details>
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<details>
+<summary>## Model 1 (CNN trained from scratch):</summary>
+<br>
 ### model architecture
 ![image](https://user-images.githubusercontent.com/61900536/212165446-2b6b9631-4a09-44b3-b2e2-978e2c951c11.png)
 - I used learning rate decay and early stopping to prevent overfitting
@@ -69,6 +76,10 @@ One way to get an idea of the speed of your model is to simply count how many co
 | conv2d_3   | 62980096 | 29,491,200 |
 | Dense  | 7372800 | 3,686,400 |
 | Dense_1  | 2560 | 1280 |
+  
+Note: A more detailed FLOPs and MACCs tabel of each layer can be viewed inside the notebook
+</details>
+
 
 
 
