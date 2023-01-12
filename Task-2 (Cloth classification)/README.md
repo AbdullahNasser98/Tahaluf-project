@@ -34,5 +34,6 @@ receptive field per layer ![image](https://user-images.githubusercontent.com/619
 
 Methods to increase the receptive field:
 1. **Add more convolutional layers (make the network deeper)**: 
+
 ![image](https://user-images.githubusercontent.com/61900536/212171863-077b1c7a-4d14-4946-b39c-45a2ffefcc5c.png)
 2. **Add pooling layers or higher stride convolutions (sub-sampling)**
