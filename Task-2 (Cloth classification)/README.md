@@ -29,6 +29,7 @@ Keeping in mind having the weights as low as possible for easy deployment of the
 - I also used class weight balancing methods to prevent biassing towards one class
 ### Receptive field
 In short, receptive field is the size of the region in the input that produces the feature.
+
 receptive field per layer ![image](https://user-images.githubusercontent.com/61900536/212172115-56919600-e0ff-4862-8cf7-bdf9de1028b2.png)  receptive field of model ![image](https://user-images.githubusercontent.com/61900536/212172169-8c792922-a491-4b8d-b4f5-03d3e9f973dd.png)
 
 
@@ -36,4 +37,13 @@ Methods to increase the receptive field:
 1. **Add more convolutional layers (make the network deeper)**: 
 
 ![image](https://user-images.githubusercontent.com/61900536/212171863-077b1c7a-4d14-4946-b39c-45a2ffefcc5c.png)
+
 2. **Add pooling layers or higher stride convolutions (sub-sampling)**
+3. **Use dilated convolutions:** Dilations introduce “holes” in a convolutional kernel [3]. The “holes” basically define a spacing between the values of the kernel. So, while the number of weights in the kernel is unchanged, the weights are no longer applied to spatially adjacent samples. Dilating a kernel by a factor of rr introduces a kind of striding of rr.
+below is an image of how sub-sampling and dilated conv affects the receptive field.
+
+![Receptive-field-pooling-vs-dilated-conv](https://user-images.githubusercontent.com/61900536/212173854-f864e29b-215a-4869-a971-4b4d22ab6e06.png)
+
+
+
+
