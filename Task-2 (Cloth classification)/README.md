@@ -85,6 +85,8 @@ below is an image of how sub-sampling and dilated conv affects the receptive fie
 | ----------- | ----------- |
 | RF | 1 |
 
+This model's rf is 1 because we have the same stride=1, padding='valid', and kernel=2, constant across all our layers
+
 ### FLOPs & MACCs:
 One way to get an idea of the speed of your model (inference time) is to simply count how many computations it does. We typically count this as FLOPS, floating point operations per second. A slight variation of this is MACCs or multiply-accumulate operations, also known as MADDs.
 <br>
@@ -98,7 +100,7 @@ One way to get an idea of the speed of your model (inference time) is to simply 
 | conv2d_3   | 62,980,096 | 31,490,048 | 
 | Dense  | 7,372,800 | 3,661,400 | 
 | Dense_1  | 2,560 | 1,280 | 
-| **Total**  | **22,852,340,800** | **113,306,880** |
+| **Total**  | **228,523,408** | **113,306,880** |
 
 ###  Decreasing FLOPs & MACCs: 
 Before we discuss how we can decrease FLOPs, we first have to understande how its calculated.
@@ -115,23 +117,76 @@ Second FC Layer - 2x128x10 = 2,560 FLOPs
 - Reduce the model size
 - Reduce the number of operations with: 1)Pooling (2)Separable Convolutions (3)Model Pruning
 
-Note: A more detailed FLOPs and MACCs tabel of each layer can be viewed inside @@@@@@@@@@ the notebook
+Note: A more detailed FLOPs and MACCs tabel of each layer can be viewed inside flops_calculator notebook
 
 ###  Results: 
 Training was stopped at epoch **20** by early stopping to avoid overfitting
+
+We got the following learning curves
 
 ![acuraccy](https://user-images.githubusercontent.com/61900536/212305010-dae0f925-1411-491b-8619-c4d5324f7626.png)
 
 ![loss](https://user-images.githubusercontent.com/61900536/212305034-3e60fc4d-9015-4b04-bb86-d93656179c3f.png)
 
+With the following results
+  ![image](https://user-images.githubusercontent.com/61900536/212306038-1457de1a-1656-4d3d-a66b-43d13bb17d03.png)
+
+And the below confusion matrix
+
+![image](https://user-images.githubusercontent.com/61900536/212306321-d95f333c-87ef-4bd6-8f7a-eba06712957e.png)
+
+
+The results aren't great, with 39% accuracy and poor precision and recall. And that's why we moved to the second architecture
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <details>
 <summary>Model 2 (using a pretrained network):</summary>
 
+### model architecture
+- I used a standard MobileNetV2 and changed the fully connected layers to `Dense(10,activation='softmax')`
+- MobileNetV2 full architecture https://arxiv.org/pdf/1801.04381v4.pdf
+- And got the following parameters
+  ![image](https://user-images.githubusercontent.com/61900536/212308268-e15989ee-af89-4344-a17c-b097f87c3a67.png)
+
+- All the layers weights were freezed during training except for the fc layer added. 
+
+### FLOPs & MACCs:
+
+| Layer name | FLOPs | MACCs |
+| ----------- | ----------- | ----------- | 
+| **Total**  | **784,609,720** | **392,163,548** |
+
+A detailed explanation of each layers FLOPs can be viewed in the flops_calculator notebook
+  
+###  Results: 
+  
+Training was stopped at epoch **4** by early stopping to avoid overfitting
+
+We got the following learning curves
+
+![acc2](https://user-images.githubusercontent.com/61900536/212313398-03dd6ef0-b565-4783-b92f-b04a71ccdf5b.png)
+
+![loss2](https://user-images.githubusercontent.com/61900536/212313410-2da59b16-208c-4183-bdd4-c55ab2d8153d.png)
+
+
+With the following results
+  ![image](https://user-images.githubusercontent.com/61900536/212313479-63416ca3-9d82-4832-bee2-ba4007cb9775.png)
+
+And the below confusion matrix
+
+![image](https://user-images.githubusercontent.com/61900536/212313536-637688a8-6348-43b3-a0c9-8ca29464f6d4.png)
+
+ This model was able to achieve **85%** accuracy on the testing data. And better results generalizing.
 </details>
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<details>
+<summary>Conclusion</summary>
+
+ So in coclusion the second model (pretrained mobilenetv2) achieved much better result on our clothing dataset
+</details>
 
 
 
