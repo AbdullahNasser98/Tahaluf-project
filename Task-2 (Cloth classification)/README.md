@@ -9,7 +9,7 @@
   <br>
 - The images shape is (533, 400, 3).
   <br>
-- Classes in the dataset = [shirt, longsleeve, dress, skirt, tshirt, pants, outwear, hat, shoes].
+- Classes in the dataset = [shirt, longsleeve, dress, skirt, tshirt, pants, outwear, hat, shoes, shorts].
   <br>
 - A sample of each class.
 
@@ -43,7 +43,7 @@ We used two approaches to choosing a model:
 2. A pretrained MobileNetV2, which we trained on our data
   <br>
 
-Keeping in mind having the weights as low as possible for easy deployment of the model
+Keeping in mind having the weights as low as possible for easy deployment of the model, which is why I choose MobileNetV2.
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ Keeping in mind having the weights as low as possible for easy deployment of the
   
 ![image](https://user-images.githubusercontent.com/61900536/212165446-2b6b9631-4a09-44b3-b2e2-978e2c951c11.png)
 
-- I used learning rate decay and early stopping to prevent overfitting
+- I used learning rate decay reduction and early stopping to prevent overfitting
   <br>
 - I also used class weight balancing methods to prevent biassing towards one class
 
