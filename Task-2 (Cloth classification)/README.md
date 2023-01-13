@@ -17,7 +17,7 @@
   <br>
 - And looking at the figure below we can notice that there is a slight class imbalancing problem which we solve later on in the code
   
-![distribution](https://user-images.githubusercontent.com/61900536/212162555-9b21c9b3-ee9c-4b75-9e12-da0559258fed.png)
+![image](https://user-images.githubusercontent.com/61900536/212409964-a3df148b-efcf-4508-bb80-f0fda86c36b4.png)
  
 </details>
 
