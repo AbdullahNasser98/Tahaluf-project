@@ -90,6 +90,7 @@ One way to get an idea of the speed of your model is to simply count how many co
 | conv2d_3   | 62980096 | 29,491,200 |
 | Dense  | 7372800 | 3,686,400 |
 | Dense_1  | 2560 | 1280 |
+| **Total**  | **22,852,340,800** | **113306880** |
   
 Note: A more detailed FLOPs and MACCs tabel of each layer can be viewed inside the notebook
 </details>
