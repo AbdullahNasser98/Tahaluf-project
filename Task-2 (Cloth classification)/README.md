@@ -188,6 +188,18 @@ And the below confusion matrix
  So in coclusion the second model (pretrained mobilenetv2) achieved much better result on our clothing dataset
 </details>
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<details>
+<summary>Future Work</summary>
+
+If there was a small tolerance for the model size one can even give transformers a shot, since they seem to do quite well in CV tasks since the publishing of the ViT model.
+
+However in our task we could try MobileVit found at: https://huggingface.co/docs/transformers/model_doc/mobilevit
+
+
+</details>
+
 
 
 
