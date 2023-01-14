@@ -32,3 +32,11 @@ Both models were trained for 50 epochs, and these were the results:
 
 Thus proving that YoloX does indeed yield better results and converges faster
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Dataset
+
+- In trying to replicate the result from the paper, I used transfer learning to train the models.
+- The dataset I choose is COCO128
+- It is a subset of the original COCO dataset consisting of 71 classes and 128 training samples.
+
