@@ -40,3 +40,10 @@ Thus proving that YoloX does indeed yield better results and converges faster
 - The dataset I choose is COCO128
 - It is a subset of the original COCO dataset consisting of 71 classes and 128 training samples.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Deliverables
+
+- The code for YOLOX can be found in the yoloX.ipynb notebook
+- The code for YOLOv5 can be found in the yolov5.ipynb notebook
+- A summary of the paper and my remarks on it can be found in Paper summary.docx document
