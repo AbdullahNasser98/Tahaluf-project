@@ -171,6 +171,7 @@ We got the following learning curves
 
 
 With the following results
+
   ![image](https://user-images.githubusercontent.com/61900536/212313479-63416ca3-9d82-4832-bee2-ba4007cb9775.png)
 
 And the below confusion matrix
@@ -185,13 +186,14 @@ And the below confusion matrix
 <details>
 <summary>Conclusion</summary>
 
- So in coclusion the second model (pretrained mobilenetv2) achieved much better result on our clothing dataset
+ So in coclusion the second model (pretrained mobilenetv2) achieved much better result on our clothing dataset. Indeed it had alot more FLOPs, however this can be tolerated with respect to the huge difference in the model performance.
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <details>
 <summary>Future Work</summary>
+
 
 If there was a small tolerance for the model size one can even give transformers a shot, since they seem to do quite well in CV tasks since the publishing of the ViT model.
 
